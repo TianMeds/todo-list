@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+:root{
+    --Button: #432C7A;
+    --Background: #FCE2DB;
+    --font-color: #000;
+    --alternative-font-color: #fff;
+    --opacty: #998484;
+    --error:#F83434;
+    --check: #888;
+
+    --margin: 0 1.8125rem;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+#name-greet:not([type="radio"]):not([type="checkbox"]), button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+}
+.container, .app{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #4EB4FF 0%, rgba(24, 38, 48, 0) 100%);
+}
+.name{
+    width: 265px;
+    height: 262px;
+    background-color: var(--Background);
+    border-radius: 40px;
+}
+.box{
+    width: 278px;
+    height: 455px;
+    background-color: var(--Background);
+    border-radius: 40px;
+    overflow-y: scroll;
+}
+.box::-webkit-scrollbar{
+    display: none;
+}
+.name h1{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--font-color);
+    text-align: center;
+    margin-top: 72px;
+}
+#name{
+    margin-top: 26px;
+    width: 223px;
+    height: 31px;
+    border-radius: 10px;
+    margin-left: -10px;
+    background: transparent;
+} 
+input[type=text]{
+    padding-left: 7px;   
+}
+::placeholder{
+    font-size: 12px;
+    color: var(--opacty);
+    opacity: 80%;
+}
+
+input:focus::placeholder{
+    color: transparent;
+}
+.name h2{
+    text-align: center;
+    font-size: 12px;
+}
+.greeting .title{
+    display: flex;
+}
+.greeting .title input{
+    margin-left: 0.5rem;
+	flex: 1 1 0%;
+	min-width: 0;
+    margin-right: 1rem;
+}
+.greeting .title, 
+.greeting .title input {
+	color: var(--font-color);
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+#name-greet::placeholder{
+    font-size: 20px;
+    color: var(--opacty);
+    opacity: 80%;
+}
+.greeting h1{
+    margin-left: 29px;
+    margin-top: 20px;
+}
+.create-list h3{
+    margin-left: 1.8125rem;
+    margin-bottom: 1.6rem;
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.create-list h4{
+    margin: var(--margin);
+    font-size: 12px;
+    color: var(--opacty);
+}
+.create-list input[type=text]{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 218px;
+    font-size: 1.125rem;
+    padding: 0.8rem;
+    color: var(--font-color);
+    background-color: transparent;
+    margin-bottom: 1.1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+    border: 1px solid #847171;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+}
+.create-list input[type=button]{
+    margin: 0 0 1rem;
+    width: 100%;
+    max-width: 218px;
+    font-size: 1.125rem;
+    padding: 0.5rem 1rem;
+    color: var(--alternative-font-color);
+    background-color: var(--Button);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s ease-out;
+}
+.create-list input[type=button]:hover{
+    background-color: transparent;
+    border: 1px solid var(--Button);
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.todo-list h3{
+    margin-left: 1.8125rem;
+    margin-bottom: 1rem;
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+li input{
+    border: none;
+    background: transparent;
+}
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: var(--alternative-font-color);
+    font-size: 18px;
+    transition: 0.2s;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin: var(--margin);
+    max-width: 234px;
+    margin-bottom: 20px;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    text-decoration: line-through;
+	color: var(--grey);
+    background-color: var(--check);
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+.delete {
+	color: var(--error);
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+.edit {
+    color: var(--Button);
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 30px 12px 12px;
+}
+.error{
+    color: var(--error);
+    
+}
+.input{
+    margin-left: 1.8125rem;
+}
+@media only screen and (min-width: 768px) {
+    .name{
+        width: 543px;
+        height: 376px;
+    }
+    .name h1{
+        font-size: 40px;
+    }
+    #name{
+        width: 418px;
+        height: 54px;
+        margin-left: 33px;
+    }
+    ::placeholder{
+        font-size: 18px;
+    }
+    .name #loading{
+        font-size: 15px;
+    }
+    .box{
+        width: 550px;
+        height: 600px;
+    }
+    .greeting .title, 
+    .greeting .title input {
+	font-size: 2rem;
+    }
+    #name-greet::placeholder{
+        font-size: 25px;
+        color: var(--opacty);
+        opacity: 80%;
+    }
+    .create-list h3{
+        font-size: 1rem;
+    }
+    .create-list h4{
+        font-size: 1rem;
+    }
+    .create-list input[type=text]{
+        max-width: 468px;
+        font-size: 18px;
+    }
+    .create-list input[type=button]{
+        max-width: 468px;
+        font-size: 18px;
+    }
+    .todo-list h3{
+        font-size: 1.1rem;
+    }
+    ul li {
+        max-width: 468px;
+    }
+    .edit {
+        padding: 12px 50px 12px 12px;
+    }
+
+@media only screen and (min-width: 1000px){
+    
+    .box{
+        width: 550px;
+        height: 700px;
+    }
+    .edit {
+        padding: 12px 50px 12px 12px;
+    }
+}
+
+
+
+
+
+
+}

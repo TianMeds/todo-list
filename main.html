@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-------Links------->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css'>
+    <link rel="stylesheet" href="styles.css">
+
+    <!--JS Import-->
+    <title>Todo-List App</title>
+</head>
+<body>
+    <!--App Container-->
+    <main class="app">
+
+        <!--Box for the List-->
+        <div class="box">
+
+            <!--Header of the App-->
+            <section class="greeting">
+                <h1 class="title" id="greet">Hello! <input type="text" id="name-greet" placeholder="Name here" /></h1>
+            </section>
+
+            <!--Add task-->
+            <div class="create-list">
+                <h3>Create a Todo</h3>
+                    <h4>What's on your todo?</h4>
+                    <div class="input">
+                        <input type="text" name="new-todo-input" id="new-todo-input" placeholder="e.g Practice Coding">
+                        <small class="error"></small>
+                        <input type="button" id="task-submit" value="Add Todo" onclick="AddTodo()">
+                    </div>
+            </div>
+            <!--Todo List-->
+            <div class="todo-list">
+                <h3>Todo List</h3>
+                <ul id="list">
+                </ul>
+            </div>
+ 
+        </div>
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
